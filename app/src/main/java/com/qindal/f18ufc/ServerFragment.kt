@@ -24,7 +24,7 @@ class ServerFragment(private var textHandler: Handler, private var serverStatus 
         // Retain this fragment across configuration changes.
         retainInstance = true
 
-        Log.w("LOG","ServerFragment onCreate()")
+        //Log.w("LOG","ServerFragment onCreate()")
         // Create and execute the background task.
         serverThread = Server(textHandler, serverStatus)
         val threadWithRunnable = Thread(serverThread)
@@ -38,7 +38,7 @@ class ServerFragment(private var textHandler: Handler, private var serverStatus 
     }
 
     fun newAction(_button : Int, _inOut : Int) {
-        Log.w("LOG","ServerFragment newAction")
+        //Log.w("LOG","ServerFragment newAction")
         serverThread!!.newAction(_button, _inOut)
     }
 }

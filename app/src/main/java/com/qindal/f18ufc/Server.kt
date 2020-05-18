@@ -152,6 +152,8 @@ class Server(_textHandler:Handler, _txtStatus:TextView) : Runnable {
                     "UFC_ScratchPadNumberDisplay" -> {msg.what = 6}
                     "UFC_ScratchPadString1Display"  -> {msg.what = 61}
                     "UFC_ScratchPadString2Display"  -> {msg.what = 62}
+                    "UFC_Comm1Display"  -> {msg.what = 71}
+                    "UFC_Comm2Display"  -> {msg.what = 72}
                 }
                 if(msg.what > 0){
                     //Log.v("LOG", "Sending " + msg.what + " -> " + words[w])

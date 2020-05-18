@@ -15,8 +15,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="1dp"
             android:text=":"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:layout_constraintStart_toEndOf="@+id/option4"
             app:layout_constraintTop_toTopOf="@+id/option4" />
@@ -26,8 +27,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="1dp"
             android:text=":"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:layout_constraintStart_toEndOf="@+id/option4"
             app:layout_constraintTop_toTopOf="@+id/option5" />
@@ -36,17 +39,35 @@
             android:id="@+id/ONOFF"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="ON OFF"
             android:textSize="8sp"
             app:layout_constraintStart_toEndOf="@+id/BCN"
             app:layout_constraintTop_toTopOf="@+id/AP" />
 
         <Button
+            android:id="@+id/btComm1"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="4dp"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtComm1" />
+
+        <Button
+            android:id="@+id/btComm2"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="4dp"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@+id/txtComm2"
+            app:layout_constraintTop_toBottomOf="@+id/txtComm2" />
+
+        <Button
             android:id="@+id/BCN"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="BCN"
             android:textSize="7sp"
             app:layout_constraintStart_toEndOf="@+id/DL"
@@ -56,7 +77,7 @@
             android:id="@+id/DL"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="D/L"
             android:textSize="8sp"
             app:layout_constraintStart_toEndOf="@+id/ILS"
@@ -66,7 +87,7 @@
             android:id="@+id/ILS"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="ILS"
             android:textSize="8sp"
             app:layout_constraintStart_toEndOf="@+id/TCN"
@@ -76,7 +97,9 @@
             android:id="@+id/txtOptionDisplay5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="optionDisplay5"
+            android:text="XXXX"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/txtCue5"
             app:layout_constraintTop_toTopOf="@+id/txtCue5" />
 
@@ -84,7 +107,9 @@
             android:id="@+id/txtOptionDisplay4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="optionDisplay4"
+            android:text="XXXX"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/txtCue4"
             app:layout_constraintTop_toTopOf="@+id/txtCue4" />
 
@@ -92,7 +117,9 @@
             android:id="@+id/txtOptionDisplay3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="optionDisplay3"
+            android:text="XXXX"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/txtCue3"
             app:layout_constraintTop_toTopOf="@+id/txtCue3" />
 
@@ -100,7 +127,9 @@
             android:id="@+id/txtOptionDisplay2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="optionDisplay2"
+            android:text="XXXX"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/txtCue2"
             app:layout_constraintTop_toTopOf="@+id/txtCue2" />
 
@@ -233,10 +262,13 @@
 
         <TextView
             android:id="@+id/txtScratchPad"
-            android:layout_width="120dp"
-            android:layout_height="19dp"
-            android:text="ScratchPad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:text="000.000"
             android:textAlignment="textEnd"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:layout_constraintStart_toEndOf="@+id/txtString2"
             app:layout_constraintTop_toTopOf="@+id/txtString2" />
@@ -245,7 +277,7 @@
             android:id="@+id/option1"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             app:layout_constraintStart_toEndOf="@+id/txtScratchPad"
             app:layout_constraintTop_toTopOf="@+id/txtScratchPad" />
 
@@ -261,17 +293,44 @@
             android:id="@+id/txtOptionDisplay1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="optionDisplay1"
+            android:text="XXXX"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/txtCue1"
             app:layout_constraintTop_toTopOf="@+id/txtCue1" />
+
+        <TextView
+            android:id="@+id/txtComm1"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="4dp"
+            android:text="00"
+            android:textAlignment="center"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numericCLR" />
+
+        <TextView
+            android:id="@+id/txtComm2"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:text=" 00"
+            android:textAlignment="center"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/ONOFF"
+            app:layout_constraintTop_toTopOf="@+id/txtComm1" />
 
         <TextView
             android:id="@+id/txtCue1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="1dp"
             android:text=":"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:layout_constraintStart_toEndOf="@+id/option1"
             app:layout_constraintTop_toTopOf="@+id/option1" />
@@ -280,9 +339,14 @@
             android:id="@+id/txtString1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
-            android:text="O"
+            android:maxEms="2"
+            android:minEms="1"
+            android:text="00"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:autoSizeTextType="none"
             app:layout_constraintStart_toStartOf="parent"
@@ -292,7 +356,9 @@
             android:id="@+id/txtString2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="N"
+            android:text="-"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:layout_constraintStart_toEndOf="@+id/txtString1"
             app:layout_constraintTop_toTopOf="@+id/txtString1" />
@@ -302,8 +368,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="1dp"
             android:text=":"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:layout_constraintStart_toEndOf="@+id/option2"
             app:layout_constraintTop_toTopOf="@+id/option2" />
@@ -313,8 +381,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="1dp"
             android:text=":"
+            android:textColor="@color/Green_LCD_text"
+            android:textSize="20sp"
             android:typeface="monospace"
             app:layout_constraintStart_toEndOf="@+id/option3"
             app:layout_constraintTop_toTopOf="@+id/option3" />
@@ -326,14 +396,14 @@
             android:layout_marginTop="16dp"
             android:text="A/P"
             android:textSize="8sp"
-            app:layout_constraintStart_toStartOf="@+id/numericCLR"
+            app:layout_constraintStart_toEndOf="@+id/txtComm1"
             app:layout_constraintTop_toBottomOf="@+id/numericCLR" />
 
         <Button
             android:id="@+id/IFF"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="IFF"
             android:textSize="8sp"
             app:layout_constraintStart_toEndOf="@+id/AP"
@@ -343,7 +413,7 @@
             android:id="@+id/TCN"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="TCN"
             android:textSize="7sp"
             app:layout_constraintStart_toEndOf="@+id/IFF"

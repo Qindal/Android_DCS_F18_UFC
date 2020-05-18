@@ -6,11 +6,11 @@ import android.os.Message
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fa18_ufc.*
 import java.lang.ref.WeakReference
+
 
 class MainActivity : AppCompatActivity(), View.OnTouchListener {
 
@@ -18,6 +18,12 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
 
     private val TAG_WORKER_FRAGMENT = "ServerFragment"
     private var mServerFragment: ServerFragment? = null
+
+    // Variables for swype detection
+    private var y1: Float = 0f
+    private  var y2: Float = 0f
+    val MIN_DISTANCE = 150
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,6 +84,8 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
         numeric9.setOnTouchListener(this)
         numericEnt.setOnTouchListener(this)
         numericCLR.setOnTouchListener(this)
+        btComm1.setOnTouchListener(this)
+        btComm2.setOnTouchListener(this)
     }
 
     // Numbers extracted from command_defs.lua
@@ -347,6 +355,50 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
                     }
                 }
             }
+            btComm1 -> {
+                when (motionEvent.action){
+                    MotionEvent.ACTION_DOWN -> {
+                        mServerFragment?.newAction(8,1)
+                        y1 = motionEvent.y;
+                    }
+                    MotionEvent.ACTION_UP -> {
+                        y2 = motionEvent.y
+                        val deltaX = y2 - y1
+                        if (Math.abs(deltaX) > MIN_DISTANCE && y2 < y1) {
+                            mServerFragment?.newAction(33,1)
+                        }
+                        else if(Math.abs(deltaX) > MIN_DISTANCE && y2 > y1) {
+                            mServerFragment?.newAction(33,0)
+                        }
+                        else {
+                            mServerFragment?.newAction(8, 0)
+                        }
+                        view.performClick()
+                    }
+                }
+            }
+            btComm2 -> {
+                when (motionEvent.action){
+                    MotionEvent.ACTION_DOWN -> {
+                        mServerFragment?.newAction(9,1)
+                        y1 = motionEvent.y;
+                    }
+                    MotionEvent.ACTION_UP -> {
+                        y2 = motionEvent.y
+                        val deltaX = y2 - y1
+                        if (Math.abs(deltaX) > MIN_DISTANCE && y2 < y1) {
+                            mServerFragment?.newAction(34,1)
+                        }
+                        else if(Math.abs(deltaX) > MIN_DISTANCE && y2 > y1) {
+                            mServerFragment?.newAction(34,0)
+                        }
+                        else {
+                            mServerFragment?.newAction(9, 0)
+                        }
+                        view.performClick()
+                    }
+                }
+            }
         }
         return true
     }
@@ -362,6 +414,12 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
             val activity: MainActivity? = currentActivity.get()
             if (activity != null) {
                 var messageText = message.data.getString("text")
+                if (messageText != null) {
+                    messageText = messageText.replace('`','1',false)
+                    messageText = messageText.replace('~','2',false)
+                    messageText = messageText.replace('_','-',false)
+                }
+
                 when (message.what) {
                     // optionDisplay1
                     1 -> activity.txtOptionDisplay1.text = messageText
@@ -389,6 +447,9 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
                         else activity.txtString1.text =  " " }
                     62 -> {if(messageText!!.length > 0)  activity.txtString2.text =  messageText
                     else activity.txtString2.text =  " " }
+                    // comm displays
+                    71 -> activity.txtComm1.text = messageText
+                    72 -> activity.txtComm2.text = messageText
                 }
             }
         }
