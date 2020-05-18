@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtCue4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:text=":"
+            android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/option4"
+            app:layout_constraintTop_toTopOf="@+id/option4" />
+
+        <TextView
+            android:id="@+id/txtCue5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:text=":"
+            android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/option4"
+            app:layout_constraintTop_toTopOf="@+id/option5" />
+
+        <Button
+            android:id="@+id/ONOFF"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:text="ON OFF"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/BCN"
+            app:layout_constraintTop_toTopOf="@+id/AP" />
+
+        <Button
+            android:id="@+id/BCN"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:text="BCN"
+            android:textSize="7sp"
+            app:layout_constraintStart_toEndOf="@+id/DL"
+            app:layout_constraintTop_toTopOf="@+id/AP" />
+
+        <Button
+            android:id="@+id/DL"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:text="D/L"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/ILS"
+            app:layout_constraintTop_toTopOf="@+id/AP" />
+
+        <Button
+            android:id="@+id/ILS"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:text="ILS"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/TCN"
+            app:layout_constraintTop_toTopOf="@+id/AP" />
+
+        <TextView
+            android:id="@+id/txtOptionDisplay5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="optionDisplay5"
+            app:layout_constraintStart_toEndOf="@+id/txtCue5"
+            app:layout_constraintTop_toTopOf="@+id/txtCue5" />
+
+        <TextView
+            android:id="@+id/txtOptionDisplay4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="optionDisplay4"
+            app:layout_constraintStart_toEndOf="@+id/txtCue4"
+            app:layout_constraintTop_toTopOf="@+id/txtCue4" />
+
+        <TextView
+            android:id="@+id/txtOptionDisplay3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="optionDisplay3"
+            app:layout_constraintStart_toEndOf="@+id/txtCue3"
+            app:layout_constraintTop_toTopOf="@+id/txtCue3" />
+
+        <TextView
+            android:id="@+id/txtOptionDisplay2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="optionDisplay2"
+            app:layout_constraintStart_toEndOf="@+id/txtCue2"
+            app:layout_constraintTop_toTopOf="@+id/txtCue2" />
+
+        <Button
+            android:id="@+id/option5"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="@+id/option4"
+            app:layout_constraintTop_toBottomOf="@+id/option4" />
+
+        <Button
+            android:id="@+id/option4"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="@+id/option3"
+            app:layout_constraintTop_toBottomOf="@+id/option3" />
+
+        <Button
+            android:id="@+id/option3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="@+id/option2"
+            app:layout_constraintTop_toBottomOf="@+id/option2" />
+
+        <Button
+            android:id="@+id/numericCLR"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="CLR"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@+id/numeric7"
+            app:layout_constraintTop_toBottomOf="@+id/numeric7" />
+
+        <Button
+            android:id="@+id/numericEnt"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="ENT"
+            android:textSize="7sp"
+            app:layout_constraintStart_toEndOf="@+id/numeric0"
+            app:layout_constraintTop_toBottomOf="@+id/numeric9" />
+
+        <Button
+            android:id="@+id/numeric0"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/numericCLR"
+            app:layout_constraintTop_toBottomOf="@+id/numeric8" />
+
+        <Button
+            android:id="@+id/numeric9"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="9"
+            app:layout_constraintStart_toEndOf="@+id/numeric8"
+            app:layout_constraintTop_toBottomOf="@+id/numeric6" />
+
+        <Button
+            android:id="@+id/numeric8"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="8"
+            app:layout_constraintStart_toEndOf="@+id/numeric7"
+            app:layout_constraintTop_toBottomOf="@+id/numeric5" />
+
+        <Button
+            android:id="@+id/numeric7"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="7"
+            app:layout_constraintStart_toStartOf="@+id/numeric4"
+            app:layout_constraintTop_toBottomOf="@+id/numeric4" />
+
+        <Button
+            android:id="@+id/numeric6"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@+id/numeric5"
+            app:layout_constraintTop_toBottomOf="@+id/numeric3" />
+
+        <Button
+            android:id="@+id/numeric5"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@+id/numeric4"
+            app:layout_constraintTop_toBottomOf="@+id/numeric2" />
+
+        <Button
+            android:id="@+id/numeric1"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:text="1"
+            app:layout_constraintStart_toEndOf="@+id/txtString1"
+            app:layout_constraintStart_toStartOf="@+id/txtString1"
+            app:layout_constraintTop_toBottomOf="@+id/txtScratchPad" />
+
+        <Button
+            android:id="@+id/numeric4"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:text="4"
+            app:layout_constraintStart_toStartOf="@+id/numeric1"
+            app:layout_constraintTop_toBottomOf="@+id/numeric1" />
+
+        <Button
+            android:id="@+id/numeric2"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="6dp"
+            android:text="2"
+            app:layout_constraintStart_toEndOf="@+id/numeric1"
+            app:layout_constraintTop_toBottomOf="@+id/txtScratchPad" />
+
+        <Button
+            android:id="@+id/numeric3"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="6dp"
+            android:text="3"
+            app:layout_constraintStart_toEndOf="@+id/numeric2"
+            app:layout_constraintTop_toBottomOf="@+id/txtScratchPad" />
+
+        <TextView
+            android:id="@+id/txtScratchPad"
+            android:layout_width="120dp"
+            android:layout_height="19dp"
+            android:text="ScratchPad"
+            android:textAlignment="textEnd"
+            android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/txtString2"
+            app:layout_constraintTop_toTopOf="@+id/txtString2" />
+
+        <Button
+            android:id="@+id/option1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toEndOf="@+id/txtScratchPad"
+            app:layout_constraintTop_toTopOf="@+id/txtScratchPad" />
+
+        <Button
+            android:id="@+id/option2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="@+id/option1"
+            app:layout_constraintTop_toBottomOf="@+id/option1" />
+
+        <TextView
+            android:id="@+id/txtOptionDisplay1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="optionDisplay1"
+            app:layout_constraintStart_toEndOf="@+id/txtCue1"
+            app:layout_constraintTop_toTopOf="@+id/txtCue1" />
+
+        <TextView
+            android:id="@+id/txtCue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:text=":"
+            android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/option1"
+            app:layout_constraintTop_toTopOf="@+id/option1" />
+
+        <TextView
+            android:id="@+id/txtString1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="O"
+            android:typeface="monospace"
+            app:autoSizeTextType="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtString2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N"
+            android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/txtString1"
+            app:layout_constraintTop_toTopOf="@+id/txtString1" />
+
+        <TextView
+            android:id="@+id/txtCue2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:text=":"
+            android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/option2"
+            app:layout_constraintTop_toTopOf="@+id/option2" />
+
+        <TextView
+            android:id="@+id/txtCue3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:text=":"
+            android:typeface="monospace"
+            app:layout_constraintStart_toEndOf="@+id/option3"
+            app:layout_constraintTop_toTopOf="@+id/option3" />
+
+        <Button
+            android:id="@+id/AP"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:text="A/P"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@+id/numericCLR"
+            app:layout_constraintTop_toBottomOf="@+id/numericCLR" />
+
+        <Button
+            android:id="@+id/IFF"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:text="IFF"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/AP"
+            app:layout_constraintTop_toTopOf="@+id/AP" />
+
+        <Button
+            android:id="@+id/TCN"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:text="TCN"
+            android:textSize="7sp"
+            app:layout_constraintStart_toEndOf="@+id/IFF"
+            app:layout_constraintTop_toTopOf="@+id/AP" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"/>
+</LinearLayout>
